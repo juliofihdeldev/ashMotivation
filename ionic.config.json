@@ -1,0 +1,7 @@
+{
+  "name": "Motivation",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
