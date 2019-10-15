@@ -4,14 +4,15 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header no-border>
-  <ion-navbar color="light">
+<!-- <ion-header no-border> -->
+  <!-- <ion-navbar color="light">
     <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+      <ion-icon name="menu"> </ion-icon>
+
     </button>
-    <ion-title>Accueil</ion-title>
-  </ion-navbar>
-</ion-header>
+    <ion-title> Motivation PAM </ion-title>
+  </ion-navbar> -->
+<!-- </ion-header> -->
 <ion-content padding>
   <div class="txtLogo">
     <div class="txt">
@@ -50,7 +51,8 @@
     </ion-item>
   </ion-list>
   <ion-list>
-    <ion-item color="secondary" (click)="openOtherPage('donate')">
+      <!-- (click)="openOtherPage('donate')" -->
+    <!-- <ion-item color="secondary" >
       <ion-thumbnail item-start>
         <div class="imgM">  
           <img src="../../assets/icon/donate.png" alt="" />
@@ -61,22 +63,22 @@
         <button ion-button>Live</button>
       </p>
       <ion-icon name="more" item-end></ion-icon>
-    </ion-item>
+    </ion-item> -->
   </ion-list>
   <ion-card color="secondary">
     <ion-card-header>
       Social network
     </ion-card-header>
     <ion-list color="secondary">
-      <button ion-item color="secondary">
+      <button ion-item color="secondary" (click)="openOtherPage('facebook')">
         <ion-icon name="logo-facebook" item-start></ion-icon>
         Facebook
       </button>
-      <button ion-item color="secondary">
+      <button ion-item color="secondary" (click)="openOtherPage('twitter')">
         <ion-icon name="logo-twitter" item-start></ion-icon>
         Twitter
       </button>
-      <button ion-item color="secondary" color="secondary">
+      <button ion-item color="secondary" color="secondary" (click)="openOtherPage('instagram')">
         <ion-icon name="logo-instagram" item-start></ion-icon>
         Instagram
       </button>

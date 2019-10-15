@@ -3,7 +3,7 @@ import { ErrorHandler, NgModule } from "@angular/core";
 import { IonicApp, IonicErrorHandler, IonicModule } from "ionic-angular";
 
 import { MyApp } from "./app.component";
-import { HomePage } from "../pages/home/home";
+
 import { MainPage } from "../pages/main/main";
 import { ListPage } from "../pages/list/list";
 
@@ -23,6 +23,10 @@ import { StatusBar } from "@ionic-native/status-bar";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { HttpClientModule } from "@angular/common/http";
 
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+
+
+
 import { Media } from "@ionic-native/media";
 
 /*
@@ -40,7 +44,7 @@ Error: StaticInjectorError(AppModule)[Http -> ConnectionBackend]:
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
+
     MainPage,
     ListPage,
     AudioPage,
@@ -49,16 +53,17 @@ Error: StaticInjectorError(AppModule)[Http -> ConnectionBackend]:
     LibraryPage,
     LastestPage,
     SettingsPage,
-
     AboutPage,
     ContactPage,
     TabsPage
   ],
-  imports: [HttpClientModule, BrowserModule, IonicModule.forRoot(MyApp)],
-  bootstrap: [IonicApp],
+  imports: [HttpClientModule, BrowserModule,
+    
+    IonicModule.forRoot(MyApp)],
+  bootstrap: [IonicApp], 
   entryComponents: [
     MyApp,
-    HomePage,
+
     ListPage,
     MainPage,
     AudioPage,
@@ -66,13 +71,15 @@ Error: StaticInjectorError(AppModule)[Http -> ConnectionBackend]:
     DonatePage,
     LibraryPage,
     LastestPage,
-    SettingsPage
+    SettingsPage,
+
   ],
   providers: [
     StatusBar,
     SplashScreen,
     HttpClientModule,
     Media,
+    InAppBrowser,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
